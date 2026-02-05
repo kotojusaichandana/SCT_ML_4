@@ -1,39 +1,36 @@
-HAND GESTURE RECOGNITION USING DEEP LEARNING
-==========================================
+# ✋ Hand Gesture Recognition using Machine Learning
 
-PROJECT OVERVIEW
-----------------
-This project implements a Hand Gesture Recognition system using Deep Learning and Computer Vision. 
-A Convolutional Neural Network (CNN) is trained on a hand gesture image dataset and the trained model 
-is then used to recognize hand gestures in real time using a webcam.
+## 📌 Project Overview
+This project focuses on building a Hand Gesture Recognition system using Machine Learning techniques.  
+The goal is to recognize human hand gestures from images or webcam input and classify them into predefined gesture categories.
 
-The system captures live video input, preprocesses the hand region, and predicts the gesture using 
-a trained TensorFlow/Keras model.
+This project demonstrates how computer vision and ML can be combined to enable human–computer interaction, which is widely used in real-world applications such as touchless interfaces, assistive technologies, and smart systems.
 
+This project was completed as **Task 4** under the SkillCraft Technology Internship Program.
 
-OBJECTIVES
-----------
-• To build a real-time hand gesture recognition system
-• To train a CNN model for gesture classification
-• To perform live gesture detection using a webcam
-• To apply image preprocessing for better prediction accuracy
+## 🎯 Objectives
+- Understand image-based data preprocessing
+- Train a machine learning model for gesture classification
+- Perform real-time hand gesture recognition using webcam input
+- Build an end-to-end ML pipeline from data loading to prediction
 
+## 🧠 Technologies Used
+- Python
+- OpenCV
+- NumPy
+- Scikit-learn / TensorFlow (model-based)
+- Streamlit
+- VS Code
 
-TECHNOLOGIES USED
------------------
-• Programming Language : Python
-• Deep Learning        : TensorFlow, Keras
-• Computer Vision      : OpenCV
-• Data Handling        : NumPy
-• Dataset              : Leap Motion Hand Gesture Dataset
-• IDE                  : VS Code
-• Platform             : Windows
+## 📂 Dataset Information
+The dataset used for this project contains **40,000+ hand gesture images** across multiple gesture classes.
 
+⚠️ Due to GitHub file size limitations, the dataset is **not included** in this repository.
 
-DATASET DESCRIPTION
--------------------
-The project uses the Leap Motion Hand Gesture Recognition Dataset.
+### Dataset Source
+- Provided by internship / external dataset (e.g., Kaggle or institutional source)
 
+### Expected Folder Structure
 Dataset Structure:
 dataset/
 └── leapGestRecog/
@@ -51,7 +48,6 @@ dataset/
 
 Each folder represents a unique hand gesture class.
 
-
 PROJECT STRUCTURE
 -----------------
 Task04_Hand_Gesture_Recognition/
@@ -66,76 +62,51 @@ Task04_Hand_Gesture_Recognition/
 ├── test_webcam.py
 ├── README.txt
 └── requirements.txt
+Once the dataset is placed in this structure, the training and testing scripts will work without modification.
+
+## ⚙️ Project Workflow
+1. Dataset loading and preprocessing
+2. Image resizing and normalization
+3. Feature extraction / CNN-based learning
+4. Model training and evaluation
+5. Saving trained model
+6. Real-time gesture prediction using webcam
+
+## ▶️ How to Run the Project
+
+### Step 1: Install dependencies
+pip install numpy opencv-python scikit-learn streamlit
+
+### Step 2: Train the model
+python train.py
+
+### Step 3: Test using webcam
+python test_webcam.py
+
+### Step 4 (Optional): Run UI
+streamlit run app.py
+
+## 📊 Results
+- Successfully classified multiple hand gestures
+- Achieved reliable real-time predictions
+- Demonstrated practical ML application with live input
+
+## 🚀 Key Learnings
+- Working with large-scale image datasets
+- Handling real-time computer vision pipelines
+- Understanding challenges in gesture-based ML systems
+- Improving model accuracy through experimentation
+
+## 📌 Conclusion
+This project strengthened my understanding of **Machine Learning + Computer Vision** and how theoretical concepts translate into real-world applications.
+It reflects hands-on experience in building, debugging, and deploying an ML-based system.
+
+## 👤 Author
+**Sai Chandana Kotoju**  
+SkillCraft Technology Internship – Task 4
+
+## 📜 License
+This project is for educational and internship evaluation purposes.
 
 
-MODEL ARCHITECTURE
-------------------
-• Convolutional Neural Network (CNN)
-• Conv2D + ReLU Activation
-• MaxPooling Layers
-• Flatten Layer
-• Fully Connected Dense Layers
-• Dropout for regularization
-• Softmax output layer for classification
 
-
-WORKING PRINCIPLE
------------------
-1. The CNN model is trained using labeled gesture images from the dataset.
-2. Images are resized, normalized, and converted to grayscale.
-3. After training, the model is saved as "gesture_model.h5".
-4. During testing, webcam captures live video frames.
-5. A Region of Interest (ROI) is extracted from each frame.
-6. Image preprocessing is applied to match training data.
-7. The trained model predicts the gesture in real time.
-8. The predicted gesture label is displayed on the screen.
-
-
-IMPORTANT NOTE ON DATASET AND WEBCAM
------------------------------------
-The training dataset consists of infrared images captured using Leap Motion sensors, 
-whereas the testing phase uses visible-light webcam images.
-
-Due to this difference, predictions may occasionally show reduced accuracy. 
-To minimize this gap, image preprocessing techniques such as grayscale conversion, 
-blurring, and thresholding have been applied during webcam testing.
-
-This limitation is inherent to the dataset and does not affect the correctness 
-or implementation quality of the project.
-
-
-INSTALLATION AND EXECUTION
---------------------------
-1. Install Python (version 3.9 recommended)
-2. Install required libraries:
-   pip install tensorflow opencv-python numpy scikit-learn
-3. Train the model:
-   python train.py
-4. Run real-time gesture recognition:
-   python test_webcam.py
-5. Press 'Q' to exit the webcam window
-
-
-RESULTS
--------
-• Successfully trained a CNN model for hand gesture recognition
-• Real-time webcam gesture detection implemented
-• Model predictions displayed live on the screen
-• Project demonstrates practical application of Deep Learning and Computer Vision
-
-
-APPLICATIONS
-------------
-• Human-Computer Interaction
-• Touchless interfaces
-• Virtual Reality (VR) systems
-• Robotics control
-• Assistive technologies
-
-
-CONCLUSION
-----------
-This project demonstrates an effective approach to hand gesture recognition using deep learning. 
-Despite dataset modality differences, the system successfully performs real-time gesture prediction. 
-The project highlights the importance of preprocessing and model training in computer vision tasks 
-and serves as a strong foundation for advanced gesture-based interaction systems.
